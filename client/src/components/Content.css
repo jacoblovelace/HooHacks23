@@ -8,11 +8,19 @@
 .photo_upload {
     margin: 0 auto;
     width: 50%;
-    height: 300px;
+    padding-bottom: 50%;
+    box-sizing: border-box;
     background-color: #ddd;
     border: 4px dashed #aaa;
     text-align: center;
+    position: relative;
 }
+
+/* .photo-upload:after {
+    content: "";
+    display:block;
+    padding-bottom: 100%;
+} */
 
 .photo_upload > div {
     position: absolute;
