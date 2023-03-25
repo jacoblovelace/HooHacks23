@@ -6,7 +6,7 @@ function Content() {
         this is content
         <div className="photo_upload">
             <div>
-                <span>Upload image here</span>
+                <p>Upload image here</p>
                 <button>Upload</button>
             </div>
         </div>
