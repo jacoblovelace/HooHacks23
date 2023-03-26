@@ -7,9 +7,9 @@ function Navbar(props) {
             Logo
           </div>
           <ul>
-              <button onClick = {() => props.handleScroll(props.identiferDiv)}>Identifier</button>
-              <button onClick = {() => props.handleScroll(props.sustainabilityDiv)}>Sustainability</button>
-              <button>About</button>
+              <li><button onClick = {() => props.handleScroll(props.identifierDiv)}>Identifier</button></li>
+              <li><button onClick = {() => props.handleScroll(props.sustainabilityDiv)}>Sustainability</button></li>
+              <li><button>About</button></li>
             </ul>
     </div>
   );

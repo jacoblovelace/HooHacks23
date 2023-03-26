@@ -6,9 +6,9 @@ import Identifier from './components/Identifier';
 import Sustainability from './components/Sustainability';
 
 function App() {
+
   const identifierDiv = useRef(null);
   const sustainabilityDiv = useRef(null);
-  
 
   function handleScroll(ref) {
     console.log('clicked');
@@ -21,7 +21,7 @@ function App() {
   }
   return (
     <div>
-      <Navbar handleScroll = {handleScroll} />
+      <Navbar handleScroll = {handleScroll} identifierDiv={identifierDiv} sustainabilityDiv={sustainabilityDiv} />
       <div className="main-body"> 
         <div ref = {identifierDiv}>
           <Identifier/>
