@@ -25,7 +25,7 @@ function App() {
       <div className="main-body"> 
         <div ref = {identifierDiv}>
           <Identifier/>
-        </div>
+        </div >
         <div ref = {sustainabilityDiv}>
           <Sustainability/>
         </div>
