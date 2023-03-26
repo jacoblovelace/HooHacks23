@@ -1,12 +1,16 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import Content from './components/Content';
+import Identifier from './components/Identifier';
+import Sustainability from './components/Sustainability';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Content />
+      <div className="main-body">
+        <Identifier />
+        <Sustainability />
+      </div>
     </div>
   );
 }
