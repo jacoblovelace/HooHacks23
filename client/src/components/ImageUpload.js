@@ -3,7 +3,6 @@ import Dropzone from 'react-dropzone';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import './ImageUpload.css';
-import Sustainability from './Sustainability';
 
 function ImageUpload() {
     const [image, setImage] = useState(null);
