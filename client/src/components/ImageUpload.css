@@ -1,0 +1,69 @@
+.photo_upload {
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    outline: 6px dashed #aaa;
+    outline-offset: -15px;
+    cursor: pointer;
+}
+
+.photo_upload > div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.custom-image {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
+
+.disposal-types {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+}
+
+.recycle {
+    height: 40px;
+    line-height: 38px;
+    background: #007FFF;
+    color: white;
+    text-transform: uppercase;
+    padding: 0px 10px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.trash {
+    height: 40px;
+    line-height: 38px;
+    background: orangered;
+    color: white;
+    text-transform: uppercase;
+    padding: 0px 10px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.compost {
+    height: 40px;
+    line-height: 38px;
+    background: goldenrod;
+    color: white;
+    text-transform: uppercase;
+    padding: 0px 10px;
+    border-radius: 50px;
+    font-size: 14px;
+}

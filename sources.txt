@@ -1,1 +1,6 @@
-sources:
+
+react dropzone:
+https://react-dropzone.js.org/
+
+EPA statistics:
+ "National Overview: Facts and Figures on Materials, Waste and Recycling - Municipal Solid Waste." EPA, 2021, https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials.
