@@ -3,7 +3,6 @@ import Dropzone from 'react-dropzone';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import './ImageUpload.css';
-import Sustainability from './Sustainability';
 
 function ImageUpload() {
     const [image, setImage] = useState(null);
@@ -22,12 +21,12 @@ function ImageUpload() {
       setItem("plastic");
     }
 
-    const itemArray = Object.keys(itemDescriptions).map((item, index) => (
-      <div key={index}>
-        <h3>{item}</h3>
-        <p>{itemDescriptions[item]}</p>
-      </div>
-    ));
+    // const itemArray = Object.keys(itemDescriptions).map((item, index) => (
+    //   <div key={index}>
+    //     <h3>{item}</h3>
+    //     <p>{itemDescriptions[item]}</p>
+    //   </div>
+    // ));
   
     const handleDrop = acceptedFiles => {
       setImage(acceptedFiles[0]);
@@ -55,6 +54,7 @@ function ImageUpload() {
             {itemDescriptions[item][0].map((type) => <h3 className={type}>{type}</h3>)}
           </div>
           <p>{itemDescriptions[item][1]}</p>
+          <hr/>
         </div>
       );
     }
