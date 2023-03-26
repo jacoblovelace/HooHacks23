@@ -22,6 +22,7 @@ function Sustainability() {
           {itemDescriptions[item][0].map((type) => <h3 className={type}>{type}</h3>)}
         </div>
         <p>{itemDescriptions[item][1]}</p>
+        <hr/>
       </div>
     );
   }

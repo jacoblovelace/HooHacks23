@@ -4,3 +4,16 @@
     max-width: 1000px;
     margin: 20px auto;
 }
+
+h3 {
+    margin: 10px 0;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+hr {
+    border: 0.5px solid grey;
+    margin-bottom: 30px;
+}
