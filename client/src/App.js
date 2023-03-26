@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Identifier from './components/Identifier';
 import Sustainability from './components/Sustainability';
+import Test from './components/Test';
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
         </div >
         <div ref = {sustainabilityDiv}>
           <Sustainability/>
+        </div>
+        <div>
+          <Test />
         </div>
         
       </div>
