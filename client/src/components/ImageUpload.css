@@ -1,0 +1,28 @@
+.photo_upload {
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    border: 4px dashed #aaa;
+    cursor: pointer;
+}
+
+.photo_upload > div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.custom-image {
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
