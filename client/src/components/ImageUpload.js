@@ -3,13 +3,16 @@ import Dropzone from 'react-dropzone';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import './ImageUpload.css';
+import Sustainability from './Sustainability';
 
 function ImageUpload() {
     const [image, setImage] = useState(null);
     const [item, setItem] = useState("");
 
     const itemDescriptions = {
-      "glass": "recycle it"
+      "glass": "recycle it",
+      "plastic": "test",
+      "trash": "test2"
     }
 
     const identifyItem = item_image => {
@@ -18,6 +21,13 @@ function ImageUpload() {
       // once item is identified, setItem to identified item
       setItem("glass");
     }
+
+    const itemArray = Object.keys(itemDescriptions).map((item, index) => (
+      <div key={index}>
+        <h3>{item}</h3>
+        <p>{itemDescriptions[item]}</p>
+      </div>
+    ));
   
     const handleDrop = acceptedFiles => {
       setImage(acceptedFiles[0]);
