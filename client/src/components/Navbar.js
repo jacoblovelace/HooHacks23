@@ -7,9 +7,9 @@ function Navbar() {
             Logo
           </div>
           <ul>
-              <li><Link to='/Home'>Home</Link></li>
+              <button>Home</button>
               <button>Sustainability</button>
-              <li><a href="#About">About</a></li>
+              <button>About</button>
             </ul>
     </div>
   );
