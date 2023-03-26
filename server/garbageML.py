@@ -61,8 +61,10 @@ def main_stuff():
 
 @app.route("/prediction", methods=['POST'])
 def predictionML():
-    data = request.get_json()
-    result = classify_image(data)
+    file = request.files['image']
+    file.save('image.jpg')
+    img = PImage.open("image.jpg")
+    result = classify_image(img)
     return jsonify(result)
 
 
