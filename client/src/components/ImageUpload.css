@@ -8,7 +8,8 @@
     justify-content: center;
     align-items: center;
     background-color: #ddd;
-    border: 4px dashed #aaa;
+    outline: 6px dashed #aaa;
+    outline-offset: -15px;
     cursor: pointer;
 }
 
