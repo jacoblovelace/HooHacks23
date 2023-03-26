@@ -1,9 +1,12 @@
 
 react dropzone:
-https://react-dropzone.js.org/
+ https://react-dropzone.js.org/
 
 EPA statistics:
  "National Overview: Facts and Figures on Materials, Waste and Recycling - Municipal Solid Waste." EPA, 2021, https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials.
 
- Machine Learning Data Set:
+Machine Learning Data Set:
  "Garbage Classification (12 classes)" from Kaggle, https://www.kaggle.com/datasets/mostafaabla/garbage-classification?resource=download
+
+Machine Learning Algorithm Inspiration:
+ DAVID_MAX000 with Garbage Classification-MobilenetV2

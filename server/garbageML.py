@@ -4,8 +4,10 @@ from PIL import Image as PImage
 from keras.models import load_model
 import os
 import sys
+from flask import Flask
 
-is_old = False
+app = Flask(__name__)
+is_old = 2
 print("Am I using the old version? ", is_old)
 
 
@@ -19,7 +21,7 @@ def classify_image(img, name):
 
     preds = model.predict(np.array([img]))
 
-    if is_old:
+    if is_old == 0:
         class_labels = ['biological', 'metal', 'paper', 'plastic', 'trash', 'white-glass']
     else:
         class_labels = ['biological', 'brown-glass', 'cardboard',
@@ -29,24 +31,38 @@ def classify_image(img, name):
     if name is not None:
         print(f"The image {name}, is classified as {predicted_class_label} with a confidence score of {confidence_score:.2f}.")
     else:
-        print(predicted_class_label)
-        print(confidence_score)
+        return {predicted_class_label, confidence_score}
 
 
-if len(sys.argv) == 2:
-    test_pic = sys.argv[1]
+def main_stuff():
+    if len(sys.argv) == 2:
+        test_pic = sys.argv[1]
 
-# Load the pre-trained model
-if is_old:
-    model = load_model('my_old_model.h5')
-else:
-    model = load_model('my_model.h5')
-# Load the images
-if len(sys.argv) == 2:
-    img = PImage.open(test_pic)
-    classify_image(img, None)
-else:
-    for pics in os.walk("testPics"):
-        for image in pics[2]:
-            img = PImage.open("testPics/" + image)
-            classify_image(img, image)
+    # Load the pre-trained model
+    if is_old == 0:
+        model = load_model('my_old_model.h5')
+    elif is_old == 1:
+        model = load_model('my_model.h5')
+    elif is_old == 2:
+        model = load_model('my_new_model.h5')
+    elif is_old == 3:
+        model = load_model('model12.h5')
+
+    # Load the images
+    if len(sys.argv) == 2:
+        img = PImage.open(test_pic)
+        classify_image(img, None)
+    else:
+        for pics in os.walk("testPics"):
+            for image in pics[2]:
+                img = PImage.open("testPics/" + image)
+                classify_image(img, image)
+
+
+@app.route("/prediction")
+def predictionML(img):
+    return classify_image(img)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
