@@ -27,3 +27,28 @@
     width: 400px;
     height: 400px;
 }
+
+.disposal-types {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+}
+
+.recycle {
+    background: blue;
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 30%/50%;
+    text-align: center;
+}
+
+.trash {
+    background: tan;
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 30%/50%;
+    text-align: center;
+}
