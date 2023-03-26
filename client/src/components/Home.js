@@ -1,8 +1,8 @@
-import './Content.css';
+import './Home.css';
 import ImageUpload from './ImageUpload';
 
 
-function Content() {
+function Home() {
   return (
     <div className="container">
         <ImageUpload />
@@ -10,4 +10,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default Home;
