@@ -1,14 +1,14 @@
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-function Navbar() {
+function Navbar(props) {
   return (
     <div className="nav">
           <div className="nav-logo">
             Logo
           </div>
           <ul>
-              <button>Home</button>
-              <button>Sustainability</button>
+              <button onClick = {() => props.handleScroll(props.identiferDiv)}>Identifier</button>
+              <button onClick = {() => props.handleScroll(props.sustainabilityDiv)}>Sustainability</button>
               <button>About</button>
             </ul>
     </div>
