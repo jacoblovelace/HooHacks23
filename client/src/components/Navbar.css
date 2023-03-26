@@ -6,15 +6,15 @@
     height: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     background: seagreen;
+    gap: 50px;
 }
 
 .logo {
     transform: scale(1.5);
-    margin: 0 auto;
-    left: 50%;
 }
+
 
 ul {
     display: flex;

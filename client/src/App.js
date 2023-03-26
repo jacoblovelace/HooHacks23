@@ -14,7 +14,7 @@ function App() {
 
   function handleScroll(ref) {
     console.log('clicked');
-    const topOfDiv = ref.current.offsetTop - 100;
+    const topOfDiv = ref.current.offsetTop - 150;
     console.log(topOfDiv);
     window.scrollTo({
       top: topOfDiv,
