@@ -33,6 +33,6 @@ ul {
     background: none;
 }
 
-button:hover {
+.nav ul button:hover {
     background-color: lightgray;
 }
