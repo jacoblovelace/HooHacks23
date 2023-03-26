@@ -6,12 +6,26 @@ import './ImageUpload.css';
 
 function ImageUpload() {
     const [image, setImage] = useState(null);
+    const [item, setItem] = useState("");
+
+    const itemDescriptions = {
+      "glass": "recycle it"
+    }
+
+    const identifyItem = item_image => {
+      // algorithm to identify image category using machine learning
+
+      // once item is identified, setItem to identified item
+      setItem("glass");
+    }
   
     const handleDrop = acceptedFiles => {
       setImage(acceptedFiles[0]);
+      // once image is set, identify it
+      identifyItem(image);
     };
   
-    const renderImage = (item) => {
+    const renderImage = item => {
       return (
         <div className="image-wrapper">
           <img
@@ -19,6 +33,15 @@ function ImageUpload() {
             alt={item.originalAlt}
             className="custom-image"
           />
+        </div>
+      );
+    }
+
+    const renderItemInfo = () => {
+      return (
+        <div>
+          <h3>{item}</h3>
+          <p>{itemDescriptions[item]}</p>
         </div>
       );
     }
@@ -36,13 +59,16 @@ function ImageUpload() {
     return (
         <div>
         {image ? (
-          <ImageGallery
-            items={images}
-            showNav={false}
-            showPlayButton={false}
-            showFullscreenButton={false}
-            renderItem={renderImage}
-          />
+          <>
+            <ImageGallery
+              items={images}
+              showNav={false}
+              showPlayButton={false}
+              showFullscreenButton={false}
+              renderItem={renderImage}
+            />
+            {renderItemInfo()}
+          </>
         ) : (
           <Dropzone onDrop={handleDrop}>
             {({getRootProps, getInputProps}) => (
