@@ -4,7 +4,7 @@ from PIL import Image as PImage
 from keras.models import load_model
 import os
 import sys
-from flask import Flask
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 is_old = 2
@@ -31,7 +31,7 @@ def classify_image(img, name):
     if name is not None:
         print(f"The image {name}, is classified as {predicted_class_label} with a confidence score of {confidence_score:.2f}.")
     else:
-        return {predicted_class_label, confidence_score}
+        return {"predicted_class": predicted_class_label, "confidence": confidence_score}
 
 
 def main_stuff():
@@ -59,9 +59,11 @@ def main_stuff():
                 classify_image(img, image)
 
 
-@app.route("/prediction")
-def predictionML(img):
-    return classify_image(img)
+@app.route("/prediction", methods=['POST'])
+def predictionML():
+    data = request.get_json()
+    result = classify_image(data)
+    return jsonify(result)
 
 
 if __name__ == "__main__":
